@@ -1,0 +1,24 @@
+/* Google link from where i got the background image */
+/* https://images.app.goo.gl/9VqJH4Me3A3XGhH27 */
+
+body {
+    background-color: black;
+    color: white;
+}
+
+.hide {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+footer {
+    /* position: fixed; */
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    font-weight: bold;
+    text-align: center;
+}
