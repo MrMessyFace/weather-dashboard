@@ -95,7 +95,7 @@ function currentForecast() {
                 var tempF = Math.floor(temp);
 
                 // Adding input the content to the dom using jQuery //
-                const card = $("<div>").addClass("card col-md-2 ml-4 bg-primary text-white");
+                const card = $("<div>").addClass("card col-md-2 ml-4 bg-success text-white");
                 const cardBody = $("<div>").addClass("card-body p-3 forecastBody")
                 const temperature = $("<p>").addClass("card-text forecastTemp").text("Temperature: " + tempF + " °F");
                 const humidity = $("<p>").addClass("card-text forecastHumidity").text("Humidity: " + resList[i].main.humidity + "%");
