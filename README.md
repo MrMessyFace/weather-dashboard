@@ -16,6 +16,6 @@ When a user loads the page, a search bar appears and you can select the name of 
 
 ## Credits
 
-
+Code was taken from [Goldie369](https://github.com/Goldie369/Weather-Dashboard) but modified to show more weather information and color changes.
 
 https://mrmessyface.github.io/weather-dashboard/
