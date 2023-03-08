@@ -94,18 +94,19 @@ function currentForecast() {
                 // Adding fahrenheit conversion - store in varialbe //
                 var temp = (resList[i].main.temp - 273.15) * 1.80 + 32;
                 var tempF = Math.floor(temp);
+                var dates = resList[i].dt_txt;
 
                 // Adding input the content to the dom using jQuery //
                 const card = $("<div>").addClass("card col-md-2 ml-4 bg-success text-white");
                 const cardBody = $("<div>").addClass("card-body p-3 forecastBody");
-                // const fiveDate = $("<p>").addClass("card-text forecastDate").text(resList[i].date.toLocaleDateString('en-US'));
+                const fiveDate = $("<p>").addClass("card-title").text(dates);
                 const temperature = $("<p>").addClass("card-text forecastTemp").text("Temperature: " + tempF + " °F");
                 const humidity = $("<p>").addClass("card-text forecastHumidity").text("Humidity: " + resList[i].main.humidity + "%");
                 const windDay = $("<p>").addClass("card-text forecastWind").text("Wind Speed: " + resList[i].wind.speed + " MPH");
                 const image = $("<img>").attr("src", "https://openweathermap.org/img/w/" + resList[i].weather[0].icon + ".png");
 
                 // Adding Append data stored in variables to the page //
-                cardBody.append(image, temperature, humidity, windDay);
+                cardBody.append(fiveDate, image, temperature, humidity, windDay);
                 card.append(cardBody);
                 $("#forecast").append(card);
             };
