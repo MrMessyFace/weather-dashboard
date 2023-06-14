@@ -24,13 +24,13 @@ $("#searchBtn").on("click", function () {
         url: queryUrl,
         method: "GET"
     })
-    
-    // Function to store temperature for Fahrenheit conversions
-    .then(function (res) {
-        currentCondition(res);
-        currentForecast(res);
-        makeList();
-    });
+
+        // Function to store temperature for Fahrenheit conversions
+        .then(function (res) {
+            currentCondition(res);
+            currentForecast(res);
+            makeList();
+        });
 });
 
 // Function that adds elements to the page
@@ -46,7 +46,7 @@ function currentCondition(res) {
     tempF = Math.floor(tempF);
 
     $('#currentCity').empty();
-    
+
     // The current weather section
     const card = $("<div>").addClass("card bg-transparent text-white");
     // The current weather section body
@@ -61,7 +61,7 @@ function currentCondition(res) {
     const wind = $("<p>").addClass("card-text current-wind").text("Wind Speed: " + res.wind.speed + " MPH");
     // Current humidity
     const humidity = $("<p>").addClass("card-text current-humidity").text("Humidity: " + res.main.humidity + "%");
-    
+
     // Adding append data stored in variables to the page
     city.append(city);
     cardBody.append(city, imageIcon, temp, wind, humidity);
